@@ -1,5 +1,5 @@
 // components/Chat.js
-import { useEffect, useRef, useState } from "react";
+import React from "react";
 
 function App() {
   // const [input, setInput] = useState("");

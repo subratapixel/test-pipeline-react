@@ -72,8 +72,8 @@ jobs:
           context: ./
           # Note: tags has to be all lower-case
           tags: |
-            subratapixel/gitops:${{ github.sha }}
-            ghcr.io/subratapixel/gitops:${{ github.sha }}
+            subratapixel/test-pipeline-react:${{ github.sha }}
+            ghcr.io/subratapixel/test-pipeline-react:${{ github.sha }}
           # build on feature branches, push only on main branch
           push: ${{ github.ref == 'refs/heads/main' }}
 
@@ -91,7 +91,7 @@ jobs:
           git config --global user.email "subrata.pramanick@pixelconsultancy.in"
           git config --global user.name "subratapixel"
           echo ${{ github.sha }}
-          sed -i "s#${{ github.actor }}.*#${{ github.actor }}/gitops01:${{ github.sha }}#g" deployment.yaml
+          sed -i "s#${{ github.actor }}.*#${{ github.actor }}/test-pipeline-react:${{ github.sha }}#g" deployment.yaml
           git add -A
           git commit -am "Update image for - ${{ github.sha }}"
       - run: echo ${{ github }}
