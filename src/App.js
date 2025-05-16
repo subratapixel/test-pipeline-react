@@ -65,7 +65,7 @@ function App() {
     <div
       style={{ maxWidth: 600, margin: "2rem auto", fontFamily: "sans-serif" }}
     >
-      <h2>💬 Real-time Chat</h2>
+      <h2>💬 Real-time Chats</h2>
       {/* <p>Status: {status}</p>
       <div
         style={{
